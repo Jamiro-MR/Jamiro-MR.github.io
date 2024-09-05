@@ -1,0 +1,45 @@
+<!-- Gutierrez Bejarano Braulio Roberto -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TM Practice</title>
+    <!-- Incluir CSS de Beer -->
+    <link href="https://cdn.jsdelivr.net/npm/beercss@3.7.0/dist/cdn/beer.min.css" rel="stylesheet">
+    <!-- Incluir JavaScript de Beer para funcionalidades adicionales -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.7.0/dist/cdn/beer.min.js"></script>
+    <!-- Incluir JavaScript para colores dinámicos de Material Design -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
+    <!-- Incluir JavaScript para efectos de partículas -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/particle-api-js@8/dist/particle.min.js"></script>
+    <!-- Incluir MathJax para renderizar matemáticas en la página -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Incluir el archivo CSS personalizado -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Carga un icono -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Contenedor principal centrado -->
+    <article>
+        <!-- Texto que indica la funcionalidad del TM -->
+        <span id="TM">Cambie el valor del TM</span>
+        <div class="slider-container">
+            <!-- Icono para disminuir el valor del slider -->
+            <i class="fa fa-minus slider-icon" aria-hidden="true" onclick="changeValue(-1)"></i>
+            <!-- Control deslizante para ajustar el valor -->
+            <input type="range" min="5" max="20" step="1" value="5" id="Ktms" oninput="outputUpdate(this.value)">
+            <!-- Icono para aumentar el valor del slider -->
+            <i class="fa fa-plus slider-icon" aria-hidden="true" onclick="changeValue(1)"></i>
+        </div>
+        <!-- Texto que muestra el valor del slider y el resultado -->
+        <span id="TM">5 * <span id="Kvaluetms">X</span> = <span id="result">?</span></span>
+        <!-- Imagen decorativa debajo del texto TM -->
+        <img src="wumyblop.png" alt="Wumyblop Image" class="wumyblop-image">
+    </article>
+
+    <!-- Importar archivo JavaScript personalizado -->
+    <script src="script.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>
