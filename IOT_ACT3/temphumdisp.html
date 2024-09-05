@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor de Temperatura y Humedad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style> /* Made by Gutierrez Bejarano Braulio Roberto */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow display */
+            padding: 30px;
+            text-align: center;
+            width: 300px;
+            border: 2px solid rgba(255, 255, 255, 0.7); /* Border display */
+        }
+
+        .icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            transition: color 0.5s ease;
+        }
+
+        .value {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            transform: translateY(10px);
+        }
+
+        .value.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .label {
+            font-size: 18px;
+            color: #555555;
+        }
+
+        .temperature {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="temperature">
+            <i class="fa fa-thermometer-half icon"></i>
+            <div id="Temperatura" class="value">??? °C</div>
+            <div class="label">Temperatura</div>
+        </div>
+        <div class="humidity">
+            <i class="fa fa-tint icon"></i>
+            <div id="Humedad" class="value">??? %</div>
+            <div class="label">Humedad</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particle-api-js@10/dist/particle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        var $Temp = $('#Temperatura');  // Asignamos el objeto Temperatura a una variable
+        var $Hum = $('#Humedad');       // Asignamos el objeto Humedad a una variable
+        var temp = 0;
+        var hum = 0;
+        var particle = new Particle();
+        var token;
+
+        // Autenticación con Particle
+        particle.login({username: 'bgutierrez14@ucol.mx', password: 'lucas_10'}).then(
+            function(data) {
+                token = data.body.access_token;
+            },
+            function(err) {
+                console.log('No se pudo iniciar sesión.', err);
+            }
+        );
+
+        // Actualización de datos cada 60 segundos
+        setInterval(function() {
+            // Obtener temperatura
+            particle.getVariable({ deviceId: '340017000947313037363132', name: 'TEMP', auth: token }).then(
+                function(data) {
+                    temp = data.body.result;
+                },
+                function(err) {
+                    console.log('Ocurrió un error al obtener la temperatura:', err);
+                }
+            );
+
+            // Obtener humedad
+            particle.getVariable({ deviceId: '340017000947313037363132', name: 'HUM', auth: token }).then(
+                function(data) {
+                    hum = data.body.result;
+                },
+                function(err) {
+                    console.log('Ocurrió un error al obtener la humedad:', err);
+                }
+            );
+
+            // Actualizar los valores en la página con animación y color dinámico
+            updateDisplay();
+            updateIconColors();
+        }, 1000);
+
+        function updateDisplay() {
+            $Hum.text(hum.toFixed(2) + " %").addClass('show');
+            $Temp.text(temp.toFixed(2) + " °C").addClass('show');
+        }
+
+        function updateIconColors() {
+            if (temp > 30) {
+                $('.temperature .icon').css('color', '#FF4500'); // warm color
+            } else if (temp < 15) {
+                $('.temperature .icon').css('color', '#1E90FF'); // cool color
+            } else {
+                $('.temperature .icon').css('color', '#007BFF'); // default color
+            }
+
+            if (hum > 70) {
+                $('.humidity .icon').css('color', '#00CED1'); // high humidity color
+            } else {
+                $('.humidity .icon').css('color', '#007BFF'); // default color
+            }
+        }
+    </script>
+</body>
+</html>
