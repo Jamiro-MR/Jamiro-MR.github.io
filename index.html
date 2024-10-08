@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>GBBR -- JY Portfolio</title>
+  
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Font Awesome CDN (without integrity attribute) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" />
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <style>
+    /* Fix the positioning of the typed text and cursor */
+    #typed-output-wrapper {
+      display: inline-flex;
+      align-items: center;
+    }
+    .typed-cursor {
+      font-size: 3rem;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-lg fixed w-full z-10 top-0 text-gray-800">
+    <div class="container mx-auto flex justify-between items-center py-4">
+      <h1 class="text-3xl font-extrabold tracking-wide">My Portfolio</h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#about" class="hover:text-indigo-600">About Me</a></li>
+          <li><a href="#projects" class="hover:text-indigo-600">Projects</a></li>
+          <li><a href="#tech" class="hover:text-indigo-600">Technologies</a></li>
+          <li><a href="#education" class="hover:text-indigo-600">Education</a></li>
+          <li><a href="#social" class="hover:text-indigo-600">Social</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 text-white" id="hero">
+    <div class="relative w-full h-full flex flex-col justify-center items-center">
+      <h1 class="text-6xl font-extrabold mb-6 animate__animated animate__fadeInUp">I'm a Developer</h1>
+      <div id="typed-output-wrapper">
+        <h3 id="typed" class="text-3xl mb-4"></h3>
+      </div>
+      <a href="#about" class="mt-6 bg-yellow-500 hover:bg-yellow-400 text-white py-3 px-8 rounded-full shadow-lg transition duration-300">Discover More</a>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="py-20 bg-white" data-aos="fade-up">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-10">About Me</h2>
+      <p class="max-w-2xl mx-auto mb-8 text-lg text-gray-700">
+        Hi, I'm a passionate developer focused on creating interactive, user-friendly applications. 
+        I specialize in front-end development with a love for learning new technologies.
+      </p>
+      <a href="cv.pdf" download class="bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-6 rounded-lg shadow-md transition-all duration-300">
+        Download CV
+      </a>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-gradient-to-r from-blue-50 to-gray-50 relative" data-aos="fade-up">
+    <div class="absolute top-0 w-full">
+      <svg class="w-full h-32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,64L48,96C96,128,192,192,288,192C384,192,480,128,576,122.7C672,117,768,171,864,176C960,181,1056,139,1152,128C1248,117,1344,139,1392,149.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+    </div>
+    <div class="container mx-auto text-center relative z-10">
+      <h2 class="text-4xl font-bold mb-10">My Projects</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="bg-white shadow-lg rounded-lg p-6 transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+          <h3 class="text-xl font-semibold mb-4">Project 1</h3>
+          <p class="mb-6 text-gray-700">A brief description of the project.</p>
+          <div class="flex justify-around">
+            <a href="https://jamiro-mr.github.io/IOT_ACT7/" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-400 transition">Demo</a>
+            <a href="https://github.com/Jamiro-MR/Jamiro-MR.github.io/tree/main/IOT_ACT7" class="text-gray-700">
+              <i class="fab fa-github text-2xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies Section -->
+  <section id="tech" class="py-20 bg-gray-900 text-white" data-aos="fade-up">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-10">Technologies I Use</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        
+        <!-- Technology Card 1: HTML -->
+        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fab fa-html5 text-6xl text-orange-500"></i>
+          <p class="mt-4 text-lg font-semibold">HTML5</p>
+        </div>
+        
+        <!-- Technology Card 2: CSS -->
+        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fab fa-css3-alt text-6xl text-blue-500"></i>
+          <p class="mt-4 text-lg font-semibold">CSS3</p>
+        </div>
+        
+        <!-- Technology Card 3: JavaScript -->
+        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fab fa-js text-6xl text-yellow-400"></i>
+          <p class="mt-4 text-lg font-semibold">JavaScript</p>
+        </div>
+        
+        <!-- Technology Card 4: React -->
+        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fab fa-react text-6xl text-blue-300"></i>
+          <p class="mt-4 text-lg font-semibold">React</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="py-20 bg-white" data-aos="fade-up">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-6">Education</h2>
+      <ul class="list-none">
+        <li class="bg-white shadow-md p-6 mb-4 rounded-lg">B.S. in Computer Science - University</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Social Profiles Section -->
+  <section id="social" class="py-20 bg-gray-900 text-white" data-aos="fade-up">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-6">Social Profiles</h2>
+      <div class="flex justify-center space-x-6">
+        <a href="https://linkedin.com/in/yourprofile" class="hover:text-blue-500 transition">
+          <i class="fab fa-linkedin text-3xl"></i>
+        </a>
+        <a href="https://github.com/yourprofile" class="hover:text-gray-400 transition">
+          <i class="fab fa-github text-3xl"></i>
+        </a>
+        <a href="https://stackoverflow.com/users/yourid" class="hover:text-orange-500 transition">
+          <i class="fab fa-stack-overflow text-3xl"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Typed.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- AOS library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    // Initialize Typed.js for hero section
+    document.addEventListener("DOMContentLoaded", function() {
+      const typed = new Typed('#typed', {
+        strings: ["Web Developer", "Creative Coder", "Tech Enthusiast"],
+        typeSpeed: 60,
+        backSpeed: 40,
+        loop: true,
+        cursorChar: '|',  // Ensure cursor is at the end of the text
+        showCursor: true  // Ensure cursor is shown
+      });
+    });
+  </script>
+</body>
+</html>

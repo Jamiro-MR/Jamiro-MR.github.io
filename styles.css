@@ -1,0 +1,35 @@
+/* Custom Gradient Animation for Hero Background */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+/* Project Card Hover Effects */
+.project-card {
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Technology Icons Hover Effects */
+.tech-icon {
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tech-icon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Font Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+}
