@@ -15,18 +15,9 @@
 
   <!-- AOS for animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
-  <style>
-    /* Fix the positioning of the typed text and cursor */
-    #typed-output-wrapper {
-      display: inline-flex;
-      align-items: center;
-    }
-    .typed-cursor {
-      font-size: 3rem;
-      line-height: 1;
-    }
-  </style>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-50 text-gray-900">
 
@@ -47,14 +38,33 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 text-white" id="hero">
-    <div class="relative w-full h-full flex flex-col justify-center items-center">
-      <h1 class="text-6xl font-extrabold mb-6 animate__animated animate__fadeInUp">I'm a Developer</h1>
+  <section class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 text-white relative overflow-hidden" id="hero">
+
+    <!-- Background Elements for Depth -->
+    <div class="absolute top-0 left-0 w-full h-full opacity-50 bg-gradient-to-r from-blue-400 via-purple-600 to-blue-800"></div>
+
+    <!-- Floating Moons -->
+    <div class="moon animate-float moon-1"></div>
+    <div class="moon animate-float moon-2"></div>
+    <div class="moon animate-float moon-3"></div>
+    <div class="moon animate-float moon-4"></div>
+    <div class="moon animate-float moon-5"></div>
+    <div class="moon animate-float moon-6"></div>
+
+    <div class="relative w-full h-full flex flex-col justify-center items-center z-10">
+      <!-- Hero Image -->
+      <img src="images/heroIcon.png" alt="Hero Icon" class="hero-icon mb-6">
+
+      <!-- Hero Text -->
+      <h1 class="text-6xl font-extrabold mb-6 animate__animated animate__fadeInUp tracking-tight drop-shadow-lg">
+        I'm a Developer
+      </h1>
+
       <div id="typed-output-wrapper">
         <h3 id="typed" class="text-3xl mb-4"></h3>
       </div>
-      <a href="#about" class="mt-6 bg-yellow-500 hover:bg-yellow-400 text-white py-3 px-8 rounded-full shadow-lg transition duration-300">Discover More</a>
     </div>
+
   </section>
 
   <!-- About Me Section -->
@@ -136,24 +146,73 @@
           <i class="fab fa-html5 text-6xl text-orange-500"></i>
           <p class="mt-4 text-lg font-semibold">HTML5</p>
         </div>
-        
+
         <!-- Technology Card 2: CSS -->
         <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
           <i class="fab fa-css3-alt text-6xl text-blue-500"></i>
           <p class="mt-4 text-lg font-semibold">CSS3</p>
         </div>
-        
+
         <!-- Technology Card 3: JavaScript -->
         <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
           <i class="fab fa-js text-6xl text-yellow-400"></i>
           <p class="mt-4 text-lg font-semibold">JavaScript</p>
         </div>
-        
+
         <!-- Technology Card 4: React -->
         <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
           <i class="fab fa-react text-6xl text-blue-300"></i>
           <p class="mt-4 text-lg font-semibold">React</p>
         </div>
+
+        <!-- Technology Card 5: Node.js -->
+        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fab fa-node-js text-6xl text-green-500"></i>
+          <p class="mt-4 text-lg font-semibold">Node.js</p>
+        </div>
+
+        <!-- Technology Card 6: TypeScript -->
+        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-code text-6xl text-blue-500"></i>
+          <p class="mt-4 text-lg font-semibold">TypeScript</p>
+        </div>
+
+        <!-- Technology Card 7: Tailwind CSS -->
+        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-wind text-6xl text-teal-400"></i>
+          <p class="mt-4 text-lg font-semibold">Tailwind CSS</p>
+        </div>
+
+        <!-- Technology Card 8: MySQL -->
+        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-database text-6xl text-blue-800"></i>
+          <p class="mt-4 text-lg font-semibold">MySQL</p>
+        </div>
+
+        <!-- Technology Card 9: MongoDB -->
+        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-leaf text-6xl text-green-400"></i>
+          <p class="mt-4 text-lg font-semibold">MongoDB</p>
+        </div>
+
+        <!-- Technology Card 10: Git -->
+        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fab fa-git-alt text-6xl text-orange-600"></i>
+          <p class="mt-4 text-lg font-semibold">Git</p>
+        </div>
+
+        <!-- Technology Card 11: Docker -->
+        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fab fa-docker text-6xl text-blue-400"></i>
+          <p class="mt-4 text-lg font-semibold">Docker</p>
+        </div>
+
+        <!-- Technology Card 12: Firebase -->
+        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-fire text-6xl text-yellow-500"></i>
+          <p class="mt-4 text-lg font-semibold">Firebase</p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -162,8 +221,15 @@
   <section id="education" class="py-20 bg-white" data-aos="fade-up">
     <div class="container mx-auto text-center">
       <h2 class="text-4xl font-bold mb-6">Education</h2>
-      <ul class="list-none">
-        <li class="bg-white shadow-md p-6 mb-4 rounded-lg">B.S. in Computer Science - University</li>
+      <ul class="list-none space-y-6">
+
+        <!-- Degree Information -->
+        <li class="bg-white shadow-md p-6 rounded-lg">
+          <h3 class="text-2xl font-bold">B.S. in Software Engineering</h3>
+          <p class="text-lg mt-2">Universidad de Colima, Manzanillo, Colima</p>
+          <p class="text-gray-700 mt-2">Currently in the final steps of completing my degree, specializing in software engineering, development methodologies, and systems design.</p>
+        </li>
+
       </ul>
     </div>
   </section>
@@ -172,16 +238,26 @@
   <section id="social" class="py-20 bg-gray-900 text-white" data-aos="fade-up">
     <div class="container mx-auto text-center">
       <h2 class="text-4xl font-bold mb-6">Social Profiles</h2>
-      <div class="flex justify-center space-x-6">
-        <a href="https://linkedin.com/in/yourprofile" class="hover:text-blue-500 transition">
-          <i class="fab fa-linkedin text-3xl"></i>
+      <div class="flex justify-center space-x-8">
+
+        <!-- LinkedIn Profile -->
+        <a href="https://linkedin.com/in/yourprofile" class="group relative hover:text-blue-400 transition transform hover:scale-110">
+          <i class="fab fa-linkedin text-4xl"></i>
+          <span class="tooltip">LinkedIn</span>
         </a>
-        <a href="https://github.com/yourprofile" class="hover:text-gray-400 transition">
-          <i class="fab fa-github text-3xl"></i>
+
+        <!-- GitHub Profile -->
+        <a href="https://github.com/yourprofile" class="group relative hover:text-gray-300 transition transform hover:scale-110">
+          <i class="fab fa-github text-4xl"></i>
+          <span class="tooltip">GitHub</span>
         </a>
-        <a href="https://stackoverflow.com/users/yourid" class="hover:text-orange-500 transition">
-          <i class="fab fa-stack-overflow text-3xl"></i>
+
+        <!-- StackOverflow Profile -->
+        <a href="https://stackoverflow.com/users/yourid" class="group relative hover:text-blue-400 transition transform hover:scale-110">
+          <i class="fab fa-stack-overflow text-4xl"></i>
+          <span class="tooltip">StackOverflow</span>
         </a>
+
       </div>
     </div>
   </section>
@@ -208,8 +284,25 @@
         typeSpeed: 60,
         backSpeed: 40,
         loop: true,
-        cursorChar: '|',  // Ensure cursor is at the end of the text
-        showCursor: true  // Ensure cursor is shown
+        cursorChar: '|',
+        showCursor: true
+      });
+    });
+
+    // Smooth Scroll for Internal Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const target = document.querySelector(this.getAttribute('href'));
+        
+        if (target) {
+          // Scroll to the target section smoothly
+          window.scrollTo({
+            top: target.offsetTop - 80,  // Adjust the offset for fixed navbar height if necessary
+            behavior: 'smooth'
+          });
+        }
       });
     });
   </script>
