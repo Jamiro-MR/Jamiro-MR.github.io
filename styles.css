@@ -5,8 +5,8 @@
   100% { background-position: 0% 50%; }
 }
 .animate-gradient {
-  background-size: 200% 200%;
-  animation: gradientAnimation 10s ease infinite;
+  background-size: 300% 300%;
+  animation: gradientAnimation 8s ease infinite;
 }
 
 /* Navbar */
@@ -61,10 +61,10 @@ body {
 /* Tooltip Styles for Social Profiles */
 .tooltip {
   position: absolute;
-  bottom: 100%; /* Place tooltip above the icon */
+  bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
-  margin-bottom: 10px; /* Space between the icon and tooltip */
+  margin-bottom: 10px;
   opacity: 0;
   visibility: hidden;
   background-color: #333;
@@ -84,11 +84,11 @@ body {
 
 /* Hover Effect for Social Profile Icons */
 .group {
-  position: relative; /* Required to position the tooltip */
+  position: relative;
 }
 
 .group:hover {
-  transform: scale(1.1); /* Slight zoom on hover */
+  transform: scale(1.1);
   transition: transform 0.3s ease;
 }
 
@@ -97,92 +97,114 @@ body {
   position: relative;
   z-index: 1; /* Ensure it stays below the navbar */
   overflow: hidden;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+  background-size: 300% 300%;
+  animation: gradientAnimation 8s ease infinite;
 }
 
 /* Centered Hero Icon Image */
 .hero-icon {
   width: 20em; /* Adjust the width as needed */
   height: auto;
-  margin-bottom: 20px; /* Adds space between the image and the H1 */
+  margin-bottom: 20px;
 }
 
-/* Moon Shape */
-#hero .moon {
+/* Star Shape - Using FontAwesome Icons */
+#hero .star {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  background-color: white;
-  border-radius: 50%;
-  box-shadow: -15px 0 0 0 rgba(0, 0, 0, 0.6); /* Creates the crescent effect */
-  opacity: 0.6;
+  font-size: 2rem; /* Adjust size as needed */
+  color: #ffffff; /* White stars */
+  opacity: 0.8;
 }
 
-/* Moon Animation */
-@keyframes floatMoons {
-  0% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-50px) rotate(30deg); } /* Increased movement and slight rotation */
-  100% { transform: translateY(0) rotate(60deg); }
+/* Faster and Extended Star Animation */
+@keyframes floatStars {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-200px); } /* Increased vertical movement */
+  100% { transform: translateY(0); }
 }
 
 .animate-float {
-  animation: floatMoons 6s ease-in-out infinite;
-  opacity: 0.8; /* Adjusted opacity for better visibility */
+  animation: floatStars 5s ease-in-out infinite;
+  opacity: 0.8;
 }
 
-/* Multiple Moons with different sizes and delays */
-#hero .moon-1 {
-  width: 60px;
-  height: 60px;
-  bottom: 10%;
-  left: 15%;
+/* Strategically placed stars to avoid text and images */
+
+/* Left side of hero section */
+#hero .star-1 {
+  font-size: 2.5rem;
+  bottom: 15%;
+  left: 5%;
   animation-delay: 0s;
 }
 
-#hero .moon-2 {
-  width: 80px;
-  height: 80px;
-  top: 20%;
-  right: 10%;
+#hero .star-2 {
+  font-size: 3rem;
+  top: 30%; /* Increased from 15% to 25% to lower it within the hero section */
+  left: 8%;
+  animation-delay: 1s;
+}
+
+#hero .star-3 {
+  font-size: 3.5rem;
+  top: 45%;
+  left: 18%;
+  animation-delay: 2.5s;
+}
+
+/* Right side of hero section */
+#hero .star-4 {
+  font-size: 2rem;
+  bottom: 20%;
+  right: 5%;
   animation-delay: 2s;
 }
 
-#hero .moon-3 {
-  width: 100px;
-  height: 100px;
-  bottom: 30%;
-  right: 20%;
-  animation-delay: 4s;
+#hero .star-5 {
+  font-size: 2.8rem;
+  top: 30%;
+  right: 8%;
+  animation-delay: 1.5s;
 }
 
-#hero .moon-4 {
-  width: 50px;
-  height: 50px;
-  top: 5%;
+#hero .star-6 {
+  font-size: 3rem;
+  bottom: 5%;
+  right: 25%;
+  animation-delay: 3s;
+}
+
+/* Additional stars to surround the text and image, avoiding overlap */
+
+/* Left side of hero section (closer to center) */
+#hero .star-7 {
+  font-size: 2rem;
+  top: 55%;
   left: 25%;
   animation-delay: 1.5s;
 }
 
-#hero .moon-5 {
-  width: 70px;
-  height: 70px;
-  bottom: 25%;
-  left: 40%;
-  animation-delay: 3s;
+#hero .star-8 {
+  font-size: 2.5rem;
+  top: 70%;
+  left: 12%;
+  animation-delay: 2s;
 }
 
-#hero .moon-6 {
-  width: 90px;
-  height: 90px;
-  top: 25%;
-  right: 30%;
-  animation-delay: 5s;
+/* Right side of hero section (closer to center) */
+#hero .star-9 {
+  font-size: 2.3rem;
+  top: 65%;
+  right: 15%;
+  animation-delay: 2.3s;
 }
 
-/* Background Pattern (optional, add the image URL) */
-.bg-hero-pattern {
-  background-image: url('/path/to/your/pattern.png'); /* Optional pattern background */
-  background-size: cover;
-  opacity: 0.2;
+#hero .star-10 {
+  font-size: 2.7rem;
+  top: 85%;
+  right: 20%;
+  animation-delay: 1.7s;
 }
 
 /* Button Hover Effect in Hero Section */
@@ -194,5 +216,5 @@ body {
 /* Text Enhancement */
 #hero h1 {
   drop-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  letter-spacing: -1px; /* Slightly tighter letter spacing */
+  letter-spacing: -1px;
 }

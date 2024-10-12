@@ -43,13 +43,19 @@
     <!-- Background Elements for Depth -->
     <div class="absolute top-0 left-0 w-full h-full opacity-50 bg-gradient-to-r from-blue-400 via-purple-600 to-blue-800"></div>
 
-    <!-- Floating Moons -->
-    <div class="moon animate-float moon-1"></div>
-    <div class="moon animate-float moon-2"></div>
-    <div class="moon animate-float moon-3"></div>
-    <div class="moon animate-float moon-4"></div>
-    <div class="moon animate-float moon-5"></div>
-    <div class="moon animate-float moon-6"></div>
+    <!-- Floating Stars (Replacing Moons with FontAwesome Stars) -->
+    <div class="star animate-float star-1"><i class="fas fa-star"></i></div>
+    <div class="star animate-float star-2"><i class="fas fa-star"></i></div>
+    <div class="star animate-float star-3"><i class="fas fa-star"></i></div>
+    <div class="star animate-float star-4"><i class="fas fa-star"></i></div>
+    <div class="star animate-float star-5"><i class="fas fa-star"></i></div>
+    <div class="star animate-float star-6"><i class="fas fa-star"></i></div>
+
+    <!-- Additional Floating Stars -->
+    <div class="star animate-float star-7"><i class="fas fa-star"></i></div>
+    <div class="star animate-float star-8"><i class="fas fa-star"></i></div>
+    <div class="star animate-float star-9"><i class="fas fa-star"></i></div>
+    <div class="star animate-float star-10"><i class="fas fa-star"></i></div>
 
     <div class="relative w-full h-full flex flex-col justify-center items-center z-10">
       <!-- Hero Image -->
@@ -64,11 +70,10 @@
         <h3 id="typed" class="text-3xl mb-4"></h3>
       </div>
     </div>
-
   </section>
 
   <!-- About Me Section -->
-  <section id="about" class="py-20 bg-white" data-aos="fade-up">
+  <section id="about" class="py-20 bg-white" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200" data-aos-easing="ease-out-back">
     <div class="container mx-auto text-center">
       <h2 class="text-4xl font-bold mb-10">About Me</h2>
       <p class="max-w-2xl mx-auto mb-8 text-lg text-gray-700">
@@ -81,10 +86,13 @@
     </div>
   </section>
 
+
   <!-- Projects Section -->
-  <section id="projects" class="py-20 bg-gradient-to-r from-blue-50 to-gray-50 relative" data-aos="fade-up">
+  <section id="projects" class="pt-36 pb-20 bg-gradient-to-r from-blue-50 to-gray-50 relative" data-aos="fade-up">
     <div class="absolute top-0 w-full">
-      <svg class="w-full h-32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,64L48,96C96,128,192,192,288,192C384,192,480,128,576,122.7C672,117,768,171,864,176C960,181,1056,139,1152,128C1248,117,1344,139,1392,149.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+      <svg class="w-full h-48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path fill="#fff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,224C384,224,480,160,576,144C672,128,768,192,864,202.7C960,213,1056,171,1152,160C1248,149,1344,171,1392,181.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+      </svg>
     </div>
     <div class="container mx-auto text-center relative z-10">
       <h2 class="text-4xl font-bold mb-10">My Projects</h2>
