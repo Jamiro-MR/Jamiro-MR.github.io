@@ -9,6 +9,14 @@
   animation: gradientAnimation 10s ease infinite;
 }
 
+/* Navbar */
+header {
+  position: fixed; /* Ensures the navbar stays at the top */
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* High z-index to stay above the hero section */
+}
+
 /* Project Card Hover Effects */
 .project-card {
   background-color: #fff;
@@ -87,6 +95,7 @@ body {
 /* Hero Section Enhancements */
 #hero {
   position: relative;
+  z-index: 1; /* Ensure it stays below the navbar */
   overflow: hidden;
 }
 
