@@ -21,10 +21,21 @@ header {
 .project-card {
   background-color: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0.75rem;
+  overflow: hidden;
 }
 .project-card:hover {
   transform: translateY(-10px); /* Lifts the card up */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Adds shadow */
+}
+
+/* Project Image Styling */
+.project-image {
+  width: 100%;
+  height: 10rem; /* Adjust height */
+  object-fit: cover; /* Ensure the image covers the div without distortion */
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
 }
 
 /* Technology Icons Hover Effects */
