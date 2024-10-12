@@ -24,9 +24,10 @@
   <!-- Navbar -->
   <header class="bg-white shadow-lg fixed w-full z-10 top-0 text-gray-800">
     <div class="container mx-auto flex justify-between items-center py-4">
-      <h1 class="text-3xl font-extrabold tracking-wide">My Portfolio</h1>
+      <h1 class="text-2xl md:text-3xl font-extrabold tracking-wide">My Portfolio</h1>
+      <!-- Navigation Menu -->
       <nav>
-        <ul class="flex space-x-6">
+        <ul class="flex space-x-4 md:space-x-6 text-sm md:text-base">
           <li><a href="#about" class="hover:text-indigo-600">About Me</a></li>
           <li><a href="#projects" class="hover:text-indigo-600">Projects</a></li>
           <li><a href="#tech" class="hover:text-indigo-600">Technologies</a></li>
@@ -39,11 +40,10 @@
 
   <!-- Hero Section -->
   <section class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 text-white relative overflow-hidden" id="hero">
-
     <!-- Background Elements for Depth -->
     <div class="absolute top-0 left-0 w-full h-full opacity-50 bg-gradient-to-r from-blue-400 via-purple-600 to-blue-800"></div>
 
-    <!-- Floating Stars (Replacing Moons with FontAwesome Stars) -->
+    <!-- Floating Stars -->
     <div class="star animate-float star-1"><i class="fas fa-star"></i></div>
     <div class="star animate-float star-2"><i class="fas fa-star"></i></div>
     <div class="star animate-float star-3"><i class="fas fa-star"></i></div>
@@ -58,49 +58,49 @@
     <div class="star animate-float star-10"><i class="fas fa-star"></i></div>
 
     <div class="relative w-full h-full flex flex-col justify-center items-center z-10">
-      <!-- Hero Image -->
-      <img src="images/heroIcon.png" alt="Hero Icon" class="hero-icon mb-6">
+      <!-- Hero Image - responsive width and height -->
+      <img src="images/heroIcon.png" alt="Hero Icon" class="hero-icon mb-6 w-40 md:w-60 lg:w-80" loading="lazy">
 
       <!-- Hero Text -->
-      <h1 class="text-6xl font-extrabold mb-6 animate__animated animate__fadeInUp tracking-tight drop-shadow-lg">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-6 animate__animated animate__fadeInUp tracking-tight drop-shadow-lg">
         I'm a Developer
       </h1>
 
+      <!-- Typed.js text output -->
       <div id="typed-output-wrapper">
-        <h3 id="typed" class="text-3xl mb-4"></h3>
+        <h3 id="typed" class="text-2xl md:text-3xl mb-4"></h3>
       </div>
     </div>
   </section>
 
   <!-- About Me Section -->
-  <section id="about" class="py-20 bg-white" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200" data-aos-easing="ease-out-back">
+  <section id="about" class="py-10 md:py-20 bg-white" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200" data-aos-easing="ease-out-back">
     <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-10">About Me</h2>
-      <p class="max-w-2xl mx-auto mb-8 text-lg text-gray-700">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 md:mb-10">About Me</h2>
+      <p class="max-w-xl md:max-w-2xl mx-auto mb-6 md:mb-8 text-base md:text-lg text-gray-700">
         Hi, I'm a passionate developer focused on creating interactive, user-friendly applications. 
         I specialize in front-end development with a love for learning new technologies.
       </p>
-      <a href="cv.pdf" download class="bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-6 rounded-lg shadow-md transition-all duration-300">
+      <a href="cv.pdf" download class="bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 md:py-2 md:px-6 rounded-lg shadow-md transition-all duration-300">
         Download CV
       </a>
     </div>
   </section>
 
-
   <!-- Projects Section -->
-  <section id="projects" class="pt-36 pb-20 bg-gradient-to-r from-blue-50 to-gray-50 relative" data-aos="fade-up">
+  <section id="projects" class="pt-24 pb-16 md:pt-36 md:pb-20 bg-gradient-to-r from-blue-50 to-gray-50 relative" data-aos="fade-up">
     <div class="absolute top-0 w-full">
-      <svg class="w-full h-48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <!-- Wave SVG Separator -->
+      <svg class="w-full h-32 md:h-48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
         <path fill="#fff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,224C384,224,480,160,576,144C672,128,768,192,864,202.7C960,213,1056,171,1152,160C1248,149,1344,171,1392,181.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
       </svg>
     </div>
     <div class="container mx-auto text-center relative z-10">
-      <h2 class="text-4xl font-bold mb-10">My Projects</h2>
-      <h2 class="text-2xl font-bold mb-10">IOT</h2>
-      <div class="grid md:grid-cols-3 gap-8">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 md:mb-10">My Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
         <!-- Project 1 -->
         <div class="bg-white shadow-lg rounded-lg p-6 transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-          <h3 class="text-xl font-semibold mb-4">Temperature displayer</h3>
+          <h3 class="text-lg md:text-xl font-semibold mb-4">Temperature Displayer</h3>
           <p class="mb-6 text-gray-700">A brief description of the project.</p>
           <div class="flex justify-around">
             <a href="https://jamiro-mr.github.io/IOT/IOT_ACT3/" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-400 transition">Demo</a>
@@ -109,8 +109,9 @@
             </a>
           </div>
         </div>
+        <!-- Project 2 -->
         <div class="bg-white shadow-lg rounded-lg p-6 transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-          <h3 class="text-xl font-semibold mb-4">Led Controller</h3>
+          <h3 class="text-lg md:text-xl font-semibold mb-4">Led Controller</h3>
           <p class="mb-6 text-gray-700">A brief description of the project.</p>
           <div class="flex justify-around">
             <a href="https://jamiro-mr.github.io/IOT/IOT_ACT5/" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-400 transition">Demo</a>
@@ -119,8 +120,9 @@
             </a>
           </div>
         </div>
+        <!-- Project 3 -->
         <div class="bg-white shadow-lg rounded-lg p-6 transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-          <h3 class="text-xl font-semibold mb-4">TM Slider</h3>
+          <h3 class="text-lg md:text-xl font-semibold mb-4">TM Slider</h3>
           <p class="mb-6 text-gray-700">A brief description of the project.</p>
           <div class="flex justify-around">
             <a href="https://jamiro-mr.github.io/IOT/IOT_ACT6/" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-400 transition">Demo</a>
@@ -129,8 +131,9 @@
             </a>
           </div>
         </div>
+        <!-- Project 4 -->
         <div class="bg-white shadow-lg rounded-lg p-6 transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-          <h3 class="text-xl font-semibold mb-4">Map Geolocalization</h3>
+          <h3 class="text-lg md:text-xl font-semibold mb-4">Map Geolocalization</h3>
           <p class="mb-6 text-gray-700">A brief description of the project.</p>
           <div class="flex justify-around">
             <a href="https://jamiro-mr.github.io/IOT/IOT_ACT7/" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-400 transition">Demo</a>
@@ -144,128 +147,89 @@
   </section>
 
   <!-- Technologies Section -->
-  <section id="tech" class="py-20 bg-gray-900 text-white" data-aos="fade-up">
+  <section id="tech" class="py-16 md:py-20 bg-gray-900 text-white" data-aos="fade-up">
     <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-10">Technologies I Use</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-
-        <!-- Technology Card 1: HTML -->
-        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
-          <i class="fab fa-html5 text-6xl text-orange-500"></i>
-          <p class="mt-4 text-lg font-semibold">HTML5</p>
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 md:mb-10">Technologies I Use</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+        <!-- Technology 1 -->
+        <div class="tech-card flex flex-col items-center bg-gray-800 p-4 md:p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fab fa-html5 text-4xl md:text-6xl text-orange-500"></i>
+          <p class="mt-2 md:mt-4 text-lg md:text-xl font-semibold">HTML5</p>
         </div>
-
-        <!-- Technology Card 2: CSS -->
-        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
-          <i class="fab fa-css3-alt text-6xl text-blue-500"></i>
-          <p class="mt-4 text-lg font-semibold">CSS3</p>
+        <!-- Technology 2 -->
+        <div class="tech-card flex flex-col items-center bg-gray-800 p-4 md:p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fab fa-css3-alt text-4xl md:text-6xl text-blue-500"></i>
+          <p class="mt-2 md:mt-4 text-lg md:text-xl font-semibold">CSS3</p>
         </div>
-
-        <!-- Technology Card 3: JavaScript -->
-        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
-          <i class="fab fa-js text-6xl text-yellow-400"></i>
-          <p class="mt-4 text-lg font-semibold">JavaScript</p>
+        <!-- Technology 3 -->
+        <div class="tech-card flex flex-col items-center bg-gray-800 p-4 md:p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fab fa-js text-4xl md:text-6xl text-yellow-400"></i>
+          <p class="mt-2 md:mt-4 text-lg md:text-xl font-semibold">JavaScript</p>
         </div>
-
-        <!-- Technology Card 4: React -->
-        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
-          <i class="fab fa-react text-6xl text-blue-300"></i>
-          <p class="mt-4 text-lg font-semibold">React</p>
+        <!-- Technology 4 -->
+        <div class="tech-card flex flex-col items-center bg-gray-800 p-4 md:p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fab fa-react text-4xl md:text-6xl text-blue-300"></i>
+          <p class="mt-2 md:mt-4 text-lg md:text-xl font-semibold">React</p>
         </div>
-
-        <!-- Technology Card 5: Node.js -->
-        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
-          <i class="fab fa-node-js text-6xl text-green-500"></i>
-          <p class="mt-4 text-lg font-semibold">Node.js</p>
+        <!-- Technology 5 -->
+        <div class="tech-card flex flex-col items-center bg-gray-800 p-4 md:p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fab fa-node-js text-4xl md:text-6xl text-green-500"></i>
+          <p class="mt-2 md:mt-4 text-lg md:text-xl font-semibold">Node.js</p>
         </div>
-
-        <!-- Technology Card 6: TypeScript -->
-        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
-          <i class="fas fa-code text-6xl text-blue-500"></i>
-          <p class="mt-4 text-lg font-semibold">TypeScript</p>
+        <!-- Technology 6 -->
+        <div class="tech-card flex flex-col items-center bg-gray-800 p-4 md:p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-code text-4xl md:text-6xl text-blue-500"></i>
+          <p class="mt-2 md:mt-4 text-lg md:text-xl font-semibold">TypeScript</p>
         </div>
-
-        <!-- Technology Card 7: Tailwind CSS -->
-        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
-          <i class="fas fa-wind text-6xl text-teal-400"></i>
-          <p class="mt-4 text-lg font-semibold">Tailwind CSS</p>
+        <!-- Technology 7 -->
+        <div class="tech-card flex flex-col items-center bg-gray-800 p-4 md:p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-wind text-4xl md:text-6xl text-teal-400"></i>
+          <p class="mt-2 md:mt-4 text-lg md:text-xl font-semibold">Tailwind CSS</p>
         </div>
-
-        <!-- Technology Card 8: Beercss -->
-        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
-          <i class="fas fa-beer text-6xl text-yellow-500"></i>
-          <p class="mt-4 text-lg font-semibold">Beercss</p>
+        <!-- Technology 8 -->
+        <div class="tech-card flex flex-col items-center bg-gray-800 p-4 md:p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-beer text-4xl md:text-6xl text-yellow-500"></i>
+          <p class="mt-2 md:mt-4 text-lg md:text-xl font-semibold">Beercss</p>
         </div>
-
-        <!-- Technology Card 9: SASS -->
-        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
-          <i class="fab fa-sass text-6xl text-pink-500"></i>
-          <p class="mt-4 text-lg font-semibold">SASS</p>
-        </div>
-
-        <!-- Technology Card 10: Bootstrap -->
-        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
-          <i class="fab fa-bootstrap text-6xl text-purple-600"></i>
-          <p class="mt-4 text-lg font-semibold">Bootstrap</p>
-        </div>
-
-        <!-- Technology Card 11: Figma -->
-        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
-          <i class="fab fa-figma text-6xl text-red-600"></i>
-          <p class="mt-4 text-lg font-semibold">Figma</p>
-        </div>
-
-        <!-- Technology Card 12: Vue.js -->
-        <div class="tech-card flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
-          <i class="fab fa-vuejs text-6xl text-green-500"></i>
-          <p class="mt-4 text-lg font-semibold">Vue.js</p>
-        </div>
-
       </div>
     </div>
   </section>
 
   <!-- Education Section -->
-  <section id="education" class="py-20 bg-white" data-aos="fade-up">
+  <section id="education" class="py-16 md:py-20 bg-white" data-aos="fade-up">
     <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-6">Education</h2>
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 md:mb-10">Education</h2>
       <ul class="list-none space-y-6">
-
         <!-- Degree Information -->
         <li class="bg-white shadow-md p-6 rounded-lg">
-          <h3 class="text-2xl font-bold">B.S. in Software Engineering</h3>
-          <p class="text-lg mt-2">Universidad de Colima, Manzanillo, Colima</p>
+          <h3 class="text-lg md:text-2xl font-bold">B.S. in Software Engineering</h3>
+          <p class="text-base md:text-lg mt-2">Universidad de Colima, Manzanillo, Colima</p>
           <p class="text-gray-700 mt-2">Currently in the final steps of completing my degree, specializing in software engineering, development methodologies, and systems design.</p>
         </li>
-
       </ul>
     </div>
   </section>
 
   <!-- Social Profiles Section -->
-  <section id="social" class="py-20 bg-gray-900 text-white" data-aos="fade-up">
+  <section id="social" class="py-16 md:py-20 bg-gray-900 text-white" data-aos="fade-up">
     <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-6">Social Profiles</h2>
-      <div class="flex justify-center space-x-8">
-
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 md:mb-10">Social Profiles</h2>
+      <div class="flex justify-center space-x-6 md:space-x-8">
         <!-- LinkedIn Profile -->
         <a href="https://linkedin.com/in/yourprofile" class="group relative hover:text-blue-400 transition transform hover:scale-110">
-          <i class="fab fa-linkedin text-4xl"></i>
+          <i class="fab fa-linkedin text-3xl md:text-4xl"></i>
           <span class="tooltip">LinkedIn</span>
         </a>
-
         <!-- GitHub Profile -->
         <a href="https://github.com/yourprofile" class="group relative hover:text-gray-300 transition transform hover:scale-110">
-          <i class="fab fa-github text-4xl"></i>
+          <i class="fab fa-github text-3xl md:text-4xl"></i>
           <span class="tooltip">GitHub</span>
         </a>
-
         <!-- StackOverflow Profile -->
         <a href="https://stackoverflow.com/users/yourid" class="group relative hover:text-blue-400 transition transform hover:scale-110">
-          <i class="fab fa-stack-overflow text-4xl"></i>
+          <i class="fab fa-stack-overflow text-3xl md:text-4xl"></i>
           <span class="tooltip">StackOverflow</span>
         </a>
-
       </div>
     </div>
   </section>
@@ -307,7 +271,7 @@
         if (target) {
           // Scroll to the target section smoothly
           window.scrollTo({
-            top: target.offsetTop - 80,  // Adjust the offset for fixed navbar height if necessary
+            top: target.offsetTop - 80,  // Adjust for navbar height
             behavior: 'smooth'
           });
         }

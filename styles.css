@@ -11,10 +11,10 @@
 
 /* Navbar */
 header {
-  position: fixed; /* Ensures the navbar stays at the top */
+  position: fixed; /* Keeps the navbar at the top */
   top: 0;
   width: 100%;
-  z-index: 1000; /* High z-index to stay above the hero section */
+  z-index: 1000; /* Ensures it stays above all content */
 }
 
 /* Project Card Hover Effects */
@@ -23,8 +23,8 @@ header {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px); /* Lifts the card up */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Adds shadow */
 }
 
 /* Technology Icons Hover Effects */
@@ -33,7 +33,7 @@ header {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .tech-icon:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px); /* Slight lift on hover */
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -42,17 +42,15 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Fix the height of the typed text container to avoid shifting */
+/* Typed.js Text Adjustment */
 #typed-output-wrapper {
   display: inline-flex;
   align-items: center;
-  height: 3rem; /* Set a consistent height to prevent layout shift */
+  height: 3rem; /* Fix height to prevent layout shifts */
 }
-
 #typed {
-  line-height: 1; /* Ensure line height is set to normal to prevent any jump */
+  line-height: 1;
 }
-
 .typed-cursor {
   font-size: 3rem;
   line-height: 1;
@@ -71,22 +69,14 @@ body {
   color: white;
   padding: 5px 10px;
   border-radius: 4px;
-  font-size: 0.875rem; /* Smaller tooltip text */
+  font-size: 0.875rem;
   white-space: nowrap;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-
-/* Show the tooltip on hover */
 .group:hover .tooltip {
   opacity: 1;
   visibility: visible;
 }
-
-/* Hover Effect for Social Profile Icons */
-.group {
-  position: relative;
-}
-
 .group:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
@@ -95,117 +85,49 @@ body {
 /* Hero Section Enhancements */
 #hero {
   position: relative;
-  z-index: 1; /* Ensure it stays below the navbar */
+  z-index: 1; /* Keeps it below the navbar */
   overflow: hidden;
   background: linear-gradient(135deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
   background-size: 300% 300%;
   animation: gradientAnimation 8s ease infinite;
 }
 
-/* Centered Hero Icon Image */
+/* Hero Image */
 .hero-icon {
-  width: 20em; /* Adjust the width as needed */
+  width: 20em; /* Adjust the width */
   height: auto;
   margin-bottom: 20px;
 }
 
-/* Star Shape - Using FontAwesome Icons */
+/* Floating Stars */
 #hero .star {
   position: absolute;
-  font-size: 2rem; /* Adjust size as needed */
-  color: #ffffff; /* White stars */
+  font-size: 2rem;
+  color: #ffffff;
   opacity: 0.8;
 }
 
-/* Faster and Extended Star Animation */
+/* Floating Animation for Stars */
 @keyframes floatStars {
   0% { transform: translateY(0); }
-  50% { transform: translateY(-200px); } /* Increased vertical movement */
+  50% { transform: translateY(-200px); } /* Larger float effect */
   100% { transform: translateY(0); }
 }
-
 .animate-float {
   animation: floatStars 5s ease-in-out infinite;
-  opacity: 0.8;
 }
 
-/* Strategically placed stars to avoid text and images */
-
-/* Left side of hero section */
-#hero .star-1 {
-  font-size: 2.5rem;
-  bottom: 15%;
-  left: 5%;
-  animation-delay: 0s;
-}
-
-#hero .star-2 {
-  font-size: 3rem;
-  top: 30%; /* Increased from 15% to 25% to lower it within the hero section */
-  left: 8%;
-  animation-delay: 1s;
-}
-
-#hero .star-3 {
-  font-size: 3.5rem;
-  top: 45%;
-  left: 18%;
-  animation-delay: 2.5s;
-}
-
-/* Right side of hero section */
-#hero .star-4 {
-  font-size: 2rem;
-  bottom: 20%;
-  right: 5%;
-  animation-delay: 2s;
-}
-
-#hero .star-5 {
-  font-size: 2.8rem;
-  top: 30%;
-  right: 8%;
-  animation-delay: 1.5s;
-}
-
-#hero .star-6 {
-  font-size: 3rem;
-  bottom: 5%;
-  right: 25%;
-  animation-delay: 3s;
-}
-
-/* Additional stars to surround the text and image, avoiding overlap */
-
-/* Left side of hero section (closer to center) */
-#hero .star-7 {
-  font-size: 2rem;
-  top: 55%;
-  left: 25%;
-  animation-delay: 1.5s;
-}
-
-#hero .star-8 {
-  font-size: 2.5rem;
-  top: 70%;
-  left: 12%;
-  animation-delay: 2s;
-}
-
-/* Right side of hero section (closer to center) */
-#hero .star-9 {
-  font-size: 2.3rem;
-  top: 65%;
-  right: 15%;
-  animation-delay: 2.3s;
-}
-
-#hero .star-10 {
-  font-size: 2.7rem;
-  top: 85%;
-  right: 20%;
-  animation-delay: 1.7s;
-}
+/* Positioning for Each Star */
+#hero .star-1 { font-size: 2.5rem; bottom: 15%; left: 5%; animation-delay: 0s; }
+#hero .star-2 { font-size: 3rem; top: 30%; left: 8%; animation-delay: 1s; }
+#hero .star-3 { font-size: 3.5rem; top: 45%; left: 18%; animation-delay: 2.5s; }
+#hero .star-4 { font-size: 2rem; bottom: 20%; right: 5%; animation-delay: 2s; }
+#hero .star-5 { font-size: 2.8rem; top: 30%; right: 8%; animation-delay: 1.5s; }
+#hero .star-6 { font-size: 3rem; bottom: 5%; right: 25%; animation-delay: 3s; }
+#hero .star-7 { font-size: 2rem; top: 55%; left: 25%; animation-delay: 1.5s; }
+#hero .star-8 { font-size: 2.5rem; top: 70%; left: 12%; animation-delay: 2s; }
+#hero .star-9 { font-size: 2.3rem; top: 65%; right: 15%; animation-delay: 2.3s; }
+#hero .star-10 { font-size: 2.7rem; top: 85%; right: 20%; animation-delay: 1.7s; }
 
 /* Button Hover Effect in Hero Section */
 #hero a:hover {
@@ -217,4 +139,15 @@ body {
 #hero h1 {
   drop-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   letter-spacing: -1px;
+}
+
+/* Adjustments for Smaller Devices */
+@media screen and (max-width: 768px) {
+  header .container {
+    padding: 0 1rem;
+  }
+  
+  #hero h1 {
+    font-size: 4rem;
+  }
 }
