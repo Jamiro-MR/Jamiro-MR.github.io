@@ -43,20 +43,7 @@
     <!-- Background Elements for Depth -->
     <div class="absolute top-0 left-0 w-full h-full opacity-50 bg-gradient-to-r from-blue-400 via-purple-600 to-blue-800"></div>
 
-    <!-- Floating Stars -->
-    <div class="star animate-float star-1"><i class="fas fa-star"></i></div>
-    <div class="star animate-float star-2"><i class="fas fa-star"></i></div>
-    <div class="star animate-float star-3"><i class="fas fa-star"></i></div>
-    <div class="star animate-float star-4"><i class="fas fa-star"></i></div>
-    <div class="star animate-float star-5"><i class="fas fa-star"></i></div>
-    <div class="star animate-float star-6"><i class="fas fa-star"></i></div>
-
-    <!-- Additional Floating Stars -->
-    <div class="star animate-float star-7"><i class="fas fa-star"></i></div>
-    <div class="star animate-float star-8"><i class="fas fa-star"></i></div>
-    <div class="star animate-float star-9"><i class="fas fa-star"></i></div>
-    <div class="star animate-float star-10"><i class="fas fa-star"></i></div>
-
+    <!-- Falling Stars -->
     <div class="relative w-full h-full flex flex-col justify-center items-center z-10">
       <!-- Hero Image - responsive width and height -->
       <img src="images/heroIcon.png" alt="Hero Icon" class="hero-icon mb-6 w-40 md:w-60 lg:w-80" loading="lazy">
@@ -291,6 +278,32 @@
         cursorChar: '|',
         showCursor: true
       });
+
+      // Function to create a falling star
+      function createFallingStar() {
+        const heroSection = document.getElementById('hero');
+        const star = document.createElement('div');
+        star.classList.add('star');
+        star.innerHTML = '<i class="fas fa-star"></i>';
+
+        // Randomize the star's horizontal position
+        const randomLeft = Math.random() * 100; // Value between 0 and 100
+        star.style.left = `${randomLeft}%`;
+
+        // Set a random animation duration and delay
+        const duration = Math.random() * 4 + 3; // Between 3s and 7s
+        star.style.animationDuration = `${duration}s`;
+
+        heroSection.appendChild(star);
+
+        // Remove the star after it has finished its animation
+        setTimeout(() => {
+          star.remove();
+        }, duration * 1000);
+      }
+
+      // Generate more stars (one every 500ms)
+      setInterval(createFallingStar, 500); // Adjusted to create more stars every 0.5 seconds
     });
 
     // Smooth Scroll for Internal Links
